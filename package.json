@@ -1,0 +1,38 @@
+{
+  "name": "fickle-minds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && npm run build:css && npm run build:html && npm run build:js",
+    "build:css": "node-sass --output-style compressed src/scss/main.scss dist/css/main.min.css",
+    "build:js": "echo \"build:js not set up\"",
+    "build:html": "npm run build:html0 && npm run build:html1 && npm run build:html2",
+    "build:html0": "html-partials-compiler ./src/index.html > ./dist/index.html",
+    "build:html1": "htmlmin -o ./dist/index.min.html ./dist/index.html",
+    "build:html2": "mv ./dist/index.min.html ./dist/index.html",
+    "start": "npm run start:all",
+    "start:all": "concurrently -n \"watch,node\" --prefix name \"npm run watch:all\" \"npm run start:server\"",    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:server": "node server",
+    "watch:all": "concurrently -n \"html,css,js\" --prefix name \"npm run watch:html\" \"npm run watch:css\" \"npm run watch:js\"",
+    "watch:html": "nodemon -e html --ignore dist/ -x \"npm run build:html\"",
+    "watch:css": "nodemon -e scss --ignore dist/ -x \"npm run build:css\"",
+    "watch:js": "nodemon -e js --ignore dist/ -x \"npm run build:js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "eslint": "^4.2.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.7.0",
+    "html-partials-compiler": "^1.0.7",
+    "htmlmin": "0.0.7",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
