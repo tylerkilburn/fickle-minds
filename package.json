@@ -12,6 +12,7 @@
     "build:html0": "html-partials-compiler ./src/index.html > ./dist/index.html",
     "build:html1": "htmlmin -o ./dist/index.min.html ./dist/index.html",
     "build:html2": "mv ./dist/index.min.html ./dist/index.html",
+    "postinstall": "npm run build",
     "start": "npm run start:all",
     "start:all": "concurrently -n \"watch,node\" --prefix name \"npm run watch:all\" \"npm run start:server\"",    "test": "echo \"Error: no test specified\" && exit 1",
     "start:server": "node server",
