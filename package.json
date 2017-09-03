@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && npm run build:css && npm run build:html && npm run build:js && npm run build:assets",
+    "build": "rimraf dist && npm run build:css && npm run build:html && npm run build:js && npm run build:assets",
     "build:css": "node-sass --output-style compressed src/scss/main.scss dist/css/main.min.css",
     "build:js": "echo \"build:js not set up\"",
     "build:assets": "cp -r ./src/assets ./dist",
@@ -12,7 +12,6 @@
     "build:html0": "html-partials-compiler ./src/index.html > ./dist/index.html",
     "build:html1": "htmlmin -o ./dist/index.min.html ./dist/index.html",
     "build:html2": "mv ./dist/index.min.html ./dist/index.html",
-    "postinstall": "npm run build",
     "start": "npm run start:all",
     "start:all": "concurrently -n \"watch,node\" --prefix name \"npm run watch:all\" \"npm run start:server\"",
     "test": "echo \"Error: no test specified\" && exit 1",
