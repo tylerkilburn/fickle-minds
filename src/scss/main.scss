@@ -1,3 +1,25 @@
-body {
-  color: navy;
-}
+// CSS Reset
+@import "reset";
+
+// Fonts
+@import "fonts";
+
+// Variables
+@import "variables/breakpoints";
+@import "variables/colors";
+
+// Mixins
+@import "mixins/typography";
+
+// General Rules for Elements
+@import "general";
+
+// Blocks
+@import "blocks/header";
+@import "blocks/page";
+@import "blocks/homeHero";
+@import "blocks/news";
+@import "blocks/tile";
+@import "blocks/video";
+@import "blocks/share";
+@import "blocks/footer";

@@ -1,0 +1,32 @@
+$__tile_border: $color_primary;
+
+.tile {
+  color: $color_black;
+  background-color: $color_greyLightest;
+  border-radius: $borderRadius;
+  margin: 32px 0;
+  border: 2px solid $__tile_border;
+  // padding: 20px;
+  
+  &__title {
+    background-color: $__tile_border;
+    color: $color_white;
+    @include text__subtitle;
+    padding: 8px 12px;
+  }
+  
+  &__body {
+    padding: 10px;
+    @include text__body;
+  }
+
+  &__center-link {
+    padding: 8px;
+    text-align: center;
+    a {
+      @include text__subtitle;
+      color: $color_primary;
+      text-decoration: none;
+    }
+  }
+}

@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && npm run build:css && npm run build:html && npm run build:js",
+    "build": "rimraf dist && npm run build:css && npm run build:html && npm run build:js && npm run build:assets",
     "build:css": "node-sass --output-style compressed src/scss/main.scss dist/css/main.min.css",
     "build:js": "echo \"build:js not set up\"",
+    "build:assets": "cp -r ./src/assets ./dist",
     "build:html": "npm run build:html0 && npm run build:html1 && npm run build:html2",
     "build:html0": "html-partials-compiler ./src/index.html > ./dist/index.html",
     "build:html1": "htmlmin -o ./dist/index.min.html ./dist/index.html",

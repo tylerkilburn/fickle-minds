@@ -1,0 +1,21 @@
+.page {
+  background-color: $color_greyDarkest;
+  color: $color_black;
+  display: flex;
+  flex-direction: column;
+  
+  &__wrapper {
+    flex-grow: 1;
+  }
+  
+  &__container {
+    background-color: $color_greyDark;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: $tablet;
+  }
+
+  @media(min-width: $tablet) {
+
+  }
+}

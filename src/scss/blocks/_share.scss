@@ -1,0 +1,14 @@
+$__tile_border: $color_primary;
+
+.share {
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  svg {
+    fill: $color_primary;
+    padding: 8px;
+    rect {
+      fill: $color_primary;
+    }
+  }
+}

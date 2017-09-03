@@ -1,0 +1,24 @@
+$font_weight_light: 300;
+$font_weight_regular: 400;
+$font_weight_bold: 500;
+
+@mixin text__headline {
+  font-weight: $font_weight_light;
+  font-size: 48px;
+  line-height: 58px;
+}
+@mixin text__title {
+  font-weight: $font_weight_bold;
+  font-size: 36px;
+  line-height: 42px;
+}
+@mixin text__subtitle {
+  font-weight: $font_weight_bold;
+  font-size: 20px;
+  line-height: 28px;
+}
+@mixin text__body {
+  font-weight: $font_weight_regular;
+  font-size: 16px;
+  line-height: 24px;
+}

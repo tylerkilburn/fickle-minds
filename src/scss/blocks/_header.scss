@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: center;
+  &__container {
+    background-color: $color_greyDarker;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    width: $tablet;
+  }
+  &__logo {
+    svg {
+      color: $color_primary; 
+    }
+  }
+  &__social-media {
+    display: flex;
+  }
+}
