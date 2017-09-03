@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && npm run build:css && npm run build:html && npm run build:js && npm run build:assets",
+    "build": "rm -rf dist && npm run build:css && npm run build:html && npm run build:js && npm run build:assets",
     "build:css": "node-sass --output-style compressed src/scss/main.scss dist/css/main.min.css",
     "build:js": "echo \"build:js not set up\"",
     "build:assets": "cp -r ./src/assets ./dist",
